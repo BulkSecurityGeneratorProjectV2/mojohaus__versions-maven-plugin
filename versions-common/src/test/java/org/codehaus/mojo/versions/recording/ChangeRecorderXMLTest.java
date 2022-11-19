@@ -27,6 +27,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
@@ -59,8 +60,8 @@ public final class ChangeRecorderXMLTest
     @Test
     public void testChanges() throws Exception
     {
-        final File file0 = File.createTempFile( "ChangeRecorderTest", ".xml" );
-        final File file1 = File.createTempFile( "ChangeRecorderTest", ".xml" );
+        final File file0 = Files.createTempFile( "ChangeRecorderTest", ".xml" ).toFile();
+        final File file1 = Files.createTempFile( "ChangeRecorderTest", ".xml" ).toFile();
 
         copyResource( "expectedFile.xml", file0 );
 

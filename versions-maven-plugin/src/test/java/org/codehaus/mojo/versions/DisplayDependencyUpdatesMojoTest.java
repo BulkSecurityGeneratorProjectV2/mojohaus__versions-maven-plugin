@@ -94,7 +94,7 @@ public class DisplayDependencyUpdatesMojoTest extends AbstractMojoTestCase
         File outputFile = null;
         try
         {
-            outputFile = File.createTempFile( "display-dependency-updates", "" );
+            outputFile = Files.createTempFile( "display-dependency-updates", "" ).toFile();
             assert outputFile.exists();
 
             DisplayDependencyUpdatesMojo mojo = (DisplayDependencyUpdatesMojo) mojoRule.lookupConfiguredMojo(
@@ -365,7 +365,7 @@ public class DisplayDependencyUpdatesMojoTest extends AbstractMojoTestCase
         File outputFile = null;
         try
         {
-            outputFile = File.createTempFile( "display-dependency-updates", "" );
+            outputFile = Files.createTempFile( "display-dependency-updates", "" ).toFile();
             assert outputFile.exists();
 
             DisplayDependencyUpdatesMojo mojo = (DisplayDependencyUpdatesMojo) mojoRule.lookupConfiguredMojo(
@@ -406,7 +406,7 @@ public class DisplayDependencyUpdatesMojoTest extends AbstractMojoTestCase
         File outputFile = null;
         try
         {
-            outputFile = File.createTempFile( "display-dependency-updates", "" );
+            outputFile = Files.createTempFile( "display-dependency-updates", "" ).toFile();
             assert outputFile.exists();
 
             DisplayDependencyUpdatesMojo mojo = (DisplayDependencyUpdatesMojo) mojoRule.lookupConfiguredMojo(

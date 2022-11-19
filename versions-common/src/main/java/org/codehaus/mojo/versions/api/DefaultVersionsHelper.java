@@ -187,7 +187,7 @@ public class DefaultVersionsHelper
     private static RuleSet getRuleSet( Wagon wagon, String remoteURI )
         throws IOException, AuthorizationException, TransferFailedException, ResourceDoesNotExistException
     {
-        File tempFile = File.createTempFile( "ruleset", ".xml" );
+        File tempFile = Files.createTempFile( "ruleset", ".xml" ).toFile();
         try
         {
             wagon.get( remoteURI, tempFile );
